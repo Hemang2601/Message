@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Subscription Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="show-btn">Subscribe Now</label>
+    <div class="wrapper">
+        <label for="toggle">
+            <i class="cancel-icon fas fa-times"></i>
+        </label>
+        <div class="icon"><i class="far fa-envelope"></i></div>
+        <div class="content">
+            <header>Join Our Web Developer Community</header>
+            <p>Subscribe to our blog and stay updated with the latest web development trends, tips, and tutorials straight to your inbox.</p>
+        </div>
+        <form action="subscribe.php" method="POST">
+            <?php include 'subscribe.php'; ?>
+            <div class="field">
+                <input type="text" class="email" name="email" placeholder="Your Email Address">
+            </div>
+            <div class="field btn">
+                <div class="layer"></div>
+                <button type="submit" name="subscribe">Subscribe</button>
+            </div>
+        </form>
+        <div class="text">We do not share your information. Unsubscribe anytime.</div>
+    </div>
+</body>
+</html>
